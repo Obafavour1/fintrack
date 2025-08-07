@@ -13,7 +13,7 @@ export const WalletLedgerDashboard = () => {
       <main className="max-w-7xl mx-auto px-4 py-6">
         {/* Page Header */}
         <div className="mb-6">
-          <div className="flex items-center justify-between ">
+          <div className="flex max-md:flex-col md:items-center justify-between ">
             <div className="flex items-center space-x-4">
               <h1 className="text-4xl flex items-center gap-4 font-bold text-[#1B2528]">
                 Wallet Ledger <ChevronDown />
@@ -25,7 +25,7 @@ export const WalletLedgerDashboard = () => {
                 </span>
               </div>
             </div>
-            <div className="flex gap-5 items-center">
+            <div className="flex gap-5 max-md:mt-5 items-center">
               <button className="bg-[#4B8B9F] text-[#020303] px-4 py-2 rounded-full hover:bg-[#4B8B9F]/60 transition-colors">
                 Share
               </button>

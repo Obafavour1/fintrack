@@ -2,14 +2,23 @@ import { LayoutGrid, Menu, Search } from "lucide-react";
 import { Avatar } from "../ui/Avatar";
 import Image from "next/image";
 
-export const DashboardHeader = () => {
+interface DashboardHeaderProps {
+  onMenuClick?: () => void;
+}
+
+export const DashboardHeader = ({ onMenuClick }: DashboardHeaderProps) => {
   return (
     <header className="fixed top-0 left-0 w-full bg-[#FCFDFD] border-b border-gray-200 px-4 py-3 z-50 ">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-4">
-            <button type="button">
-              <Menu />
+            <button
+              type="button"
+              onClick={onMenuClick}
+              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              aria-label="Toggle sidebar"
+            >
+              <Menu className="w-5 h-5 text-[#1B2528] md:hidden" />
             </button>
             <Image
               src="/fintrackLogo.png"
